@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linear_layout"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        >
+    <LinearLayout
+        android:id="@+id/controlsLayout"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginRight="20px"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+        <Button
+            android:id="@+id/lightButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Light"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            />
+        <Button
+            android:id="@+id/darkButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dark"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editTextLongitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="1"
+                    android:inputType="text"
+                    android:text=""
+                    android:textSize="20px"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewLongitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Longitude" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editTextTextLatitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="2"
+                    android:inputType="text"
+                    android:text=""
+                    android:textSize="20px"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewLatitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Latitude" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editTextZoom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="2"
+                    android:inputType="text"
+                    android:text=""
+                    android:textSize="20px"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewZoom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Zoom"
+                    android:textSize="20px"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editTextRotation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="2"
+                    android:inputType="text"
+                    android:text=""
+                    android:textSize="20px"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewRotation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Rotation" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editTextPitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="2"
+                    android:inputType="text"
+                    android:text=""
+                    android:textSize="20px"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewPitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Pitch" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <Button
+                    android:id="@+id/getButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Get"
+                    android:layout_marginLeft="10dp" />
+                <Button
+                    android:id="@+id/restartButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Restart"
+                    android:layout_marginLeft="10dp" />
+                <Button
+                    android:id="@+id/multiFeatureButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Multi"
+                    android:layout_marginLeft="10dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginRight="10px"
+                >
+                <Switch
+                    android:id="@+id/switchPadding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    />
+                <TextView
+                    android:id="@+id/textViewPadding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Left padding"
+                    android:padding="10px"/>
+                <Switch
+                    android:id="@+id/switchHammer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    />
+                <TextView
+                    android:id="@+id/textViewHammer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Hammer it"
+                    android:padding="10px"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginRight="10px"
+                >
+                <Switch
+                    android:id="@+id/switchExtentPadding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:checked="true"
+                    />
+                <TextView
+                    android:id="@+id/textViewExtentPadding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Extent padding"
+                    android:padding="10px"/>
+                <Switch
+                    android:id="@+id/switchShowPath"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    />
+                <TextView
+                    android:id="@+id/textViewShowPath"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Show path"
+                    android:padding="10px"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginRight="10px"
+                >
+                <Switch
+                    android:id="@+id/switchUseBearing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    />
+                <TextView
+                    android:id="@+id/textViewUseBearing"
+                    android:layout_width="200px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Use bearing"
+                    android:padding="10px"/>
+                <Switch
+                    android:id="@+id/switchShowPathInTargetedExtent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    />
+                <TextView
+                    android:id="@+id/textViewShowPathInTargetedExtent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Show path (targeted extent)"
+                    android:padding="10px"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="10px"
+                >
+                <TextView
+                    android:id="@+id/textViewExtent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Extent:"
+                    android:padding="10px"/>
+                <Spinner
+                    android:id="@+id/spinnerExtent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="10px"
+                >
+                <TextView
+                    android:id="@+id/textViewTargetedFeature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Targeted feature:"
+                    android:padding="10px"/>
+                <Spinner
+                    android:id="@+id/spinnerTargetedFeature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/textViewRoadPosition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Road Position:"
+                    android:padding="10px"
+                    android:width="8dp"/>
+                <EditText
+                    android:id="@+id/editTextRoadPosition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="2"
+                    android:inputType="text"
+                    android:text=""
+                    android:enabled="false"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginRight="10px"
+                >
+                <Switch
+                    android:id="@+id/switchMultipleSelection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    />
+                <TextView
+                    android:id="@+id/textViewMultipleSelection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Multi-Select Allowed"
+                    android:padding="10px"/>
+                <Button
+                    android:id="@+id/clearSelectionButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Clear"
+                    android:layout_marginLeft="10dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/textViewTappedFeatureCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10px"
+                    android:width="8dp"/>
+                <Button
+                    android:id="@+id/tappedFeaturesButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tapped Features"
+                    android:layout_marginLeft="10dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/textViewSelectedFeatureCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10px"
+                    android:width="8dp"/>
+                <Button
+                    android:id="@+id/selectedFeaturesButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Selected Features"
+                    android:layout_marginLeft="10dp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

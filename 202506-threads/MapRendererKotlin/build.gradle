@@ -1,0 +1,60 @@
+import com.android.build.api.variant.BuildConfigField
+
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'isl.mapbox.thinbindings.android'
+    compileSdk 33
+
+    defaultConfig {
+        minSdk 26
+        targetSdk 33
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "VERSION", "\"0.63.0\"")
+        }
+        debug {
+            buildConfigField("String", "VERSION", "\"0.63.0\"")
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+android {
+    buildFeatures {
+        buildConfig = true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    implementation 'com.mapbox.maps:android:11.12.0'
+    implementation 'com.mapbox.mapboxsdk:mapbox-sdk-turf:7.4.0'
+}
+
+apply from: 'https://raw.githubusercontent.com/xamarin/XamarinComponents/main/Util/AndroidGradleDependencyInfo.gradle'
+// Manually run the gradle task 'listXamarinDependencies' or 'copyXamarinDependencies', this will copy all dependent aars to 'ISL.Mapbox.ThinBindings.Android\MapRendererKotlin\xamarin'
+// Running gradle task 'app:androidDependencies' also provides a similar list but with a bit more info about the namespaces making it easier to identify the Mapbox aars.
